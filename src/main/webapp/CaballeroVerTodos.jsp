@@ -16,35 +16,34 @@
 <title>Panel de Control Caballero</title>
 </head>
 <body>
-	<header>
-	</header>
-			<div class="col-md-9 tabla">
-				<table class="table table-responsive table-striped">
-					<thead>
-						<tr>
-							<th scope="col">Caballero</th>
-							<th scope="col">Nombre</th>
-							<th scope="col">Fuerza</th>
-							<th scope="col">Experiencia</th>
-							<th scope="col">Foto</th>
-							<th scope="col">Id arma</th>
-							<th scope="col"></th>
-						</tr>
-					</thead>
-					<tbody>
-						<c:forEach items="${caballeros}" var="caballero">
-							<tr>
-								<td id="${caballero.id}">${caballero.id}</td>
-								<td>${caballero.nombre}</td>
-								<td>${caballero.fuerza}</td>
-								<td>${caballero.experiencia}</td>
-								<td>${caballero.foto}</td>
-								<td>${caballero.arma_id}</td>
-							</tr>
-						</c:forEach>
-					</tbody>
-				</table>
-			</div>
-		</div>
+	<header> </header>
+	<div class="col-md-9 tabla">
+		<table class="table table-responsive table-striped">
+			<thead>
+				<tr>
+					<th scope="col">Caballero</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Fuerza</th>
+					<th scope="col">Experiencia</th>
+					<th scope="col">Foto</th>
+					<th scope="col">Arma</th>
+					<th scope="col">Escudo</th>
+					<th scope="col"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${caballeros}" var="caballero">
+					<tr>
+						<td id="${caballero.id}">${caballero.id}</td>
+						<td>${caballero.nombre}</td>
+						<td>${caballero.fuerza}</td>
+						<td>${caballero.experiencia}</td>
+						<td>${caballero.foto}</td>
+						<td>${caballero.arma.nombre}</td>
+						<td>${caballero.escudo.nombre}</td>
+					</tr>
+				</c:forEach>
+			</tbody>
+		</table>
 	</div>
 </body>

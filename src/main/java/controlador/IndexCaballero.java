@@ -36,7 +36,6 @@ public class IndexCaballero extends HttpServlet {
 		try {
 			ArrayList<Caballero> caballeros = ModeloCaballero.verTodos();
 			request.setAttribute("caballeros", caballeros);			
-			
 			request.getRequestDispatcher("CaballeroVerTodos.jsp").forward(request, response);
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
